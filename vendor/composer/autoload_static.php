@@ -55,6 +55,7 @@ class ComposerStaticInit532062c8795a7f4cb5b789c375d536ff
         'W' => 
         array (
             'Whoops\\' => 7,
+            'Webpatser\\Uuid\\' => 15,
             'Webmozart\\Assert\\' => 17,
         ),
         'T' => 
@@ -206,6 +207,10 @@ class ComposerStaticInit532062c8795a7f4cb5b789c375d536ff
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Webpatser\\Uuid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webpatser/laravel-uuid/src/Webpatser/Uuid',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -562,15 +567,12 @@ class ComposerStaticInit532062c8795a7f4cb5b789c375d536ff
         'App\\Http\\Controllers\\CollaborationController' => __DIR__ . '/../..' . '/app/Http/Controllers/CollaborationController.php',
         'App\\Http\\Controllers\\CollaborationRoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/CollaborationRoleController.php',
         'App\\Http\\Controllers\\CollaborationRosterController' => __DIR__ . '/../..' . '/app/Http/Controllers/CollaborationRosterController.php',
-        'App\\Http\\Controllers\\Cont' => __DIR__ . '/../..' . '/app/Http/Controllers/Cont.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ModuleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ModuleController.php',
         'App\\Http\\Controllers\\ModuleReportController' => __DIR__ . '/../..' . '/app/Http/Controllers/ModuleReportController.php',
         'App\\Http\\Controllers\\ProjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProjectController.php',
-        'App\\Http\\Controllers\\ProjectDetailController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProjectDetailController.php',
         'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
-        'App\\Http\\Controllers\\UserDetailController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserDetailController.php',
         'App\\Http\\Controllers\\UserRoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserRoleController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -701,29 +703,6 @@ class ComposerStaticInit532062c8795a7f4cb5b789c375d536ff
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
-        'Database\\Factories\\CollaborationFactory' => __DIR__ . '/../..' . '/database/factories/CollaborationFactory.php',
-        'Database\\Factories\\CollaborationRoleFactory' => __DIR__ . '/../..' . '/database/factories/CollaborationRoleFactory.php',
-        'Database\\Factories\\CollaborationRosterFactory' => __DIR__ . '/../..' . '/database/factories/CollaborationRosterFactory.php',
-        'Database\\Factories\\ModuleFactory' => __DIR__ . '/../..' . '/database/factories/ModuleFactory.php',
-        'Database\\Factories\\ModuleReportFactory' => __DIR__ . '/../..' . '/database/factories/ModuleReportFactory.php',
-        'Database\\Factories\\ProjectDetailFactory' => __DIR__ . '/../..' . '/database/factories/ProjectDetailFactory.php',
-        'Database\\Factories\\ProjectFactory' => __DIR__ . '/../..' . '/database/factories/ProjectFactory.php',
-        'Database\\Factories\\RoleFactory' => __DIR__ . '/../..' . '/database/factories/RoleFactory.php',
-        'Database\\Factories\\UserDetailFactory' => __DIR__ . '/../..' . '/database/factories/UserDetailFactory.php',
-        'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
-        'Database\\Factories\\UserRoleFactory' => __DIR__ . '/../..' . '/database/factories/UserRoleFactory.php',
-        'Database\\Seeders\\CollaborationRoleSeeder' => __DIR__ . '/../..' . '/database/seeders/CollaborationRoleSeeder.php',
-        'Database\\Seeders\\CollaborationRosterSeeder' => __DIR__ . '/../..' . '/database/seeders/CollaborationRosterSeeder.php',
-        'Database\\Seeders\\CollaborationSeeder' => __DIR__ . '/../..' . '/database/seeders/CollaborationSeeder.php',
-        'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
-        'Database\\Seeders\\ModuleReportSeeder' => __DIR__ . '/../..' . '/database/seeders/ModuleReportSeeder.php',
-        'Database\\Seeders\\ModuleSeeder' => __DIR__ . '/../..' . '/database/seeders/ModuleSeeder.php',
-        'Database\\Seeders\\ProjectDetailSeeder' => __DIR__ . '/../..' . '/database/seeders/ProjectDetailSeeder.php',
-        'Database\\Seeders\\ProjectSeeder' => __DIR__ . '/../..' . '/database/seeders/ProjectSeeder.php',
-        'Database\\Seeders\\RoleSeeder' => __DIR__ . '/../..' . '/database/seeders/RoleSeeder.php',
-        'Database\\Seeders\\UserDetailSeeder' => __DIR__ . '/../..' . '/database/seeders/UserDetailSeeder.php',
-        'Database\\Seeders\\UserRoleSeeder' => __DIR__ . '/../..' . '/database/seeders/UserRoleSeeder.php',
-        'Database\\Seeders\\UserSeeder' => __DIR__ . '/../..' . '/database/seeders/UserSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -5469,6 +5448,8 @@ class ComposerStaticInit532062c8795a7f4cb5b789c375d536ff
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',
+        'Webpatser\\Uuid\\Uuid' => __DIR__ . '/..' . '/webpatser/laravel-uuid/src/Webpatser/Uuid/Uuid.php',
+        'Webpatser\\Uuid\\UuidServiceProvider' => __DIR__ . '/..' . '/webpatser/laravel-uuid/src/Webpatser/Uuid/UuidServiceProvider.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
         'Whoops\\Exception\\Frame' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Frame.php',

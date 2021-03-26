@@ -1,17 +1,28 @@
 <template>
   <main>
-    <header></header>
+    <!-- HEADER -->
+      <Navbar/>
       <Sidebar/>
-      <article><slot/></article>
+
+    <!-- CONTENT -->
+    <article>
+      <slot/>
+    </article>
+
+    <!-- FOOTER -->
+    <Footer/>
   </main>
 </template>
 
 <script>
+  import Navbar from "@/Components/Dashboard/Navbar"
   import Sidebar from "@/Components/Dashboard/Sidebar"
-
+  import Footer from "@/Components/Dashboard/Footer"
   export default {
     components: {
-      Sidebar
+      Navbar,
+      Sidebar,
+      Footer
     }
   }
 </script>

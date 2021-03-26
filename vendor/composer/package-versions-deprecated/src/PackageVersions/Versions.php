@@ -105,6 +105,7 @@ final class Versions
   'vlucas/phpdotenv' => 'v5.3.0@b3eac5c7ac896e52deab4a99068e3f4ab12d9e56',
   'voku/portable-ascii' => '1.5.6@80953678b19901e5165c56752d087fc11526017c',
   'webmozart/assert' => '1.9.1@bafc69caeb4d49c39fd0779086c03a3738cbb389',
+  'webpatser/laravel-uuid' => '4.0.1@df92ebbc5ea71ee9e0d6e2861178be42ef7eb330',
   'doctrine/instantiator' => '1.4.0@d56bf6102915de5702778fe20f2de3b2fe570b5b',
   'facade/flare-client-php' => '1.4.0@ef0f5bce23b30b32d98fd9bb49c6fa37b40eb546',
   'facade/ignition' => '2.5.13@5e9ef386aaad9985cee2ac23281a27568d083b7e',
@@ -146,7 +147,7 @@ final class Versions
   'sebastian/type' => '2.3.1@81cd61ab7bbf2de744aba0ea61fae32f721df3d2',
   'sebastian/version' => '3.0.2@c6c1022351a901512170118436c764e473f6de8c',
   'theseer/tokenizer' => '1.2.0@75a63c33a8577608444246075ea0af0d052e452a',
-  'laravel/laravel' => '1.0.0+no-version-set@',
+  'laravel/laravel' => 'dev-master@2e19ce9b5e37eb63b5316aa87ef1c81f3c647420',
 );
 
     private function __construct()

@@ -41,14 +41,31 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $uuid = Uuid::generate();
+
         $request->validate([
             'email' => 'required|email|unique:users',
             'password' => 'required|min:16',
+            'user_name_title' => 'required',
+            'user_name_given' => 'required',
+            'user_name_last' => 'required',
         ]);
 
         User::create([
+            'user_key' => $uuid,
             'email' => $request->email,
             'password' => bcrypt($request->password)
+        ]);
+
+        UserDetail::create([
+            'user_key' => $uuid,
+            'user_name_title' => $request->user_name_title,
+            'user_name_given' => $request->user_name_given,
+            'user_name_middle' => $request->user_name_middle,
+            'user_name_last' => $request->user_name_last,
+            'user_dateofbirth' => $request->user_dateofbirth,
+            'user_gender' => $request->user_gender
+
         ]);
         
         ## Success Msg ##

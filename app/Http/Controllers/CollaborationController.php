@@ -41,6 +41,8 @@ class CollaborationController extends Controller
      */
     public function store(Request $request)
     {
+        $uuid = Uuid::generate();
+
         $request->validate([
             //
         ]);

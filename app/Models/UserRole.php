@@ -17,6 +17,6 @@ class UserRole extends Model
 
     # M:1 -- USER #
     public function User(){
-        return $this->belongsTo(USER::class);
+        return $this->belongsTo(User::class);
     }
 }

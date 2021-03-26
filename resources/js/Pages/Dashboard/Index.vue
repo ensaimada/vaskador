@@ -1,7 +1,10 @@
 <template>
-    <div class="w-full px-10">
-      <br><h1>.INDEX</h1><br>
-    </div>
+  <layout>
+  <div class="w-full px-10">
+    <br><h1>.INDEX</h1><br>
+    <p>Test</p>
+  </div>
+  </layout>
 </template>
 
 <script>

@@ -1,7 +1,16 @@
 <template>
   <main>
-    <header><IndexNavbar/></header>
-      <article><slot/></article>
+    <!-- HEADER -->
+    <header>
+      <IndexNavbar/>
+    </header>
+
+    <!-- CONTENT -->
+    <article>
+      <slot/>
+    </article>
+
+    <!-- FOOTER -->
     <IndexFooter/>
   </main>
 </template>
