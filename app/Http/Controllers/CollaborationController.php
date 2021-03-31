@@ -42,13 +42,17 @@ class CollaborationController extends Controller
     public function store(Request $request)
     {
         $uuid = Uuid::generate();
+        $collaboration_max_members = 5;
 
         $request->validate([
-            //
+            'collaboration_title'=> 'required',
         ]);
 
         Collaboration::create([
-            //
+            'collaboration_key' => $uuid,
+            'collaboration_title' => $request->collaboration_title,
+            'collaboration_desc' => $request->collaboration_desc,
+            'collaboration_max_members' => $collaboration_max_members
         ]);
 
         ## Success Msg ##
@@ -89,11 +93,12 @@ class CollaborationController extends Controller
     public function update(Request $request, Collaboration $collaboration)
     {
         $request->validate([
-            //
+            'collaboration_title' => 'required'.$collaboration->collaboration_key,
         ]);
 
-        Collaboration::create([
-            //
+        Collaboration::update([
+            'collaboration_title' => $request->collaboration_title,
+            'collaboration_desc' => $request->collaboration_desc
         ]);
 
         ## Success Msg ##

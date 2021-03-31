@@ -1,14 +1,15 @@
 <template>
   <main>
     <!-- HEADER -->
-      <Navbar/>
-      <Sidebar/>
+    <Navbar/>
+    <Sidebar/>
 
     <!-- CONTENT -->
-    <article>
-      <slot/>
-    </article>
-
+    <div class="bg-red-400">
+      <article>
+        <slot/>
+      </article>
+    </div>
     <!-- FOOTER -->
     <Footer/>
   </main>
@@ -17,12 +18,10 @@
 <script>
   import Navbar from "@/Components/Dashboard/Navbar"
   import Sidebar from "@/Components/Dashboard/Sidebar"
-  import Footer from "@/Components/Dashboard/Footer"
   export default {
     components: {
       Navbar,
-      Sidebar,
-      Footer
+      Sidebar
     }
   }
 </script>

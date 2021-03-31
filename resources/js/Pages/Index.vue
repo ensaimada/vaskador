@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
   import IndexLayout from "@/Layouts/IndexLayout"
 
   export default {

@@ -4,11 +4,9 @@
             <span class="text-xl text-white font-bold uppercase tracking-wide">.VSKDR</span>
         </inertia-link>
 
-        <!--
         <button class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler" data-target="#navigation" id="openme">
-            <i class="material-icons">OPEN.ME</i>
+            <i class="material-icons">.OPENME</i>
         </button>
-        -->
 
         <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation" >
             <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto" >
@@ -28,33 +26,9 @@
                     <span>.CONTACT</span>
                 </inertia-link>
             </div>
-            <button class="bg-transparent text-gray-400 hover:text-white py-2 px-3 border border-gray-400 hover:border-white rounded">
+            <button class="bg-transparent text-gray-400 hover:text-white py-2 px-3">
                 .ENTER
             </button>
         </div>
     </nav>    
 </template>
-
-<!---<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function() {
-        $(".nav-toggler").each(function(_, navToggler) {
-            var target = $(navToggler).data("target");
-            $(navToggler).on("click", function() {
-                $(target).animate({
-                    height: "toggle"
-                });
-            });
-        });
-    });
-</script>-->
-
-<!--<script>
-    let openbtn = document.getElementById('openme');
-    let navbardrop = document.getElementById('navigation');
-
-    openbtn.addEventListener('click', function(){
-        navbardrop.classList.toggle('active');
-    });
-
-</script>-->
