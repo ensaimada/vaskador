@@ -7,20 +7,28 @@ use App\UserDetail;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
-{
+class UserController extends Controller {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $users = User::all();
+    public function index() {
+        return Inertia::render('Users/Index', [
+            'users' => User::all()->map(function ($user) {
+                return [
+                    'id' => $user->user_key,
+                    'name' => $user->user_name,
+                    'email' => $user->user_email,
+                    'edit_url' => URL::route('users.edit', $user)
+                ];
+            }),
+            'create_url' => URL::route('users.create')
 
-        return Inertia::render('Users/Index',[
-            'users' => $users,
         ]);
+
+        #$users = User::all();
+        #return Inertia::render('Users/Index',['users' => $users,]);
     }
 
     /**
@@ -28,8 +36,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         return Inertia::render('Users/Create');
     }
 
@@ -39,8 +46,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $uuid = Uuid::generate();
 
         $request->validate([
@@ -78,8 +84,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -89,8 +94,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
-    {
+    public function edit(User $user) {
         return Inertia::render('Users/Edit', [
             'user' => $user,
         ]);
@@ -103,8 +107,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
-    {
+    public function update(Request $request, User $user) {
         $request->validate([
             'email' => 'required|unique:users,email,'.$user->user_key,
         ]);
@@ -122,8 +125,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
-    {
+    public function destroy(User $user) {
         $user->delete();
 
         return redirect()->route('users.index')->with('successMsg', 'User successfully deleted.');

@@ -15,6 +15,8 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/map', function () { return Inertia::render('Test/MapsTest', []); });
+
 ## PUBLIC PAGES ##
 Route::get('/index', function () { return Inertia::render('Index', []); });
 Route::get('/about', function () { return Inertia::render('Public/About', []); });

@@ -17441,7 +17441,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 /* harmony import */ var _inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/progress */ "./node_modules/@inertiajs/progress/dist/index.js");
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Import modules...
+/* harmony import */ var vue_plugin_load_script__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-plugin-load-script */ "./node_modules/vue-plugin-load-script/index.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Import modules
+
 
 
 
@@ -17459,11 +17461,7 @@ var el = document.getElementById('app');
       }
     });
   }
-}).mixin({
-  methods: {
-    route: route
-  }
-}).use(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.plugin).mount(el);
+}).use(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.plugin).use(vue_plugin_load_script__WEBPACK_IMPORTED_MODULE_3__.default).mount(el);
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__.InertiaProgress.init({
   color: '#4B5563'
 });
@@ -35406,6 +35404,69 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/vue-plugin-load-script/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vue-plugin-load-script/index.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const LoadScript = {
+  install: function (app) {
+    app.config.globalProperties.$loadScript = function (src) {
+      // eslint-disable-line no-param-reassign
+      return new Promise(function (resolve, reject) {
+        let shouldAppend = false;
+        let el = document.querySelector('script[src="' + src + '"]');
+        if (!el) {
+          el = document.createElement('script');
+          el.type = 'text/javascript';
+          el.async = true;
+          el.src = src;
+          shouldAppend = true;
+        } else if (el.hasAttribute('data-loaded')) {
+          resolve(el);
+          return;
+        }
+
+        el.addEventListener('error', reject);
+        el.addEventListener('abort', reject);
+        el.addEventListener('load', function loadScriptHandler() {
+          el.setAttribute('data-loaded', true);
+          resolve(el);
+        });
+
+        if (shouldAppend) document.head.appendChild(el);
+      });
+    };
+
+    app.config.globalProperties.$unloadScript = function (src) {
+      // eslint-disable-line no-param-reassign
+      return new Promise(function (resolve, reject) {
+        const el = document.querySelector('script[src="' + src + '"]');
+
+        if (!el) {
+          reject();
+          return;
+        }
+
+        document.head.removeChild(el);
+
+        resolve();
+      });
+    };
+  },
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LoadScript);
+
+
+/***/ }),
+
 /***/ "./node_modules/vue/dist/vue.esm-bundler.js":
 /*!**************************************************!*\
   !*** ./node_modules/vue/dist/vue.esm-bundler.js ***!
@@ -35770,6 +35831,14 @@ var map = {
 		"./resources/js/Pages/Public/Documentation.vue",
 		"resources_js_Pages_Public_Documentation_vue"
 	],
+	"./Public/Index": [
+		"./resources/js/Pages/Public/Index.vue",
+		"resources_js_Pages_Public_Index_vue"
+	],
+	"./Public/Index.vue": [
+		"./resources/js/Pages/Public/Index.vue",
+		"resources_js_Pages_Public_Index_vue"
+	],
 	"./Public/Services": [
 		"./resources/js/Pages/Public/Services.vue",
 		"resources_js_Pages_Public_Services_vue"
@@ -35961,7 +36030,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Auth_ConfirmPassword_vue":1,"resources_js_Pages_Auth_ForgotPassword_vue":1,"resources_js_Pages_Auth_Login_vue":1,"resources_js_Pages_Auth_Register_vue":1,"resources_js_Pages_Auth_ResetPassword_vue":1,"resources_js_Pages_Auth_VerifyEmail_vue":1,"resources_js_Pages_Authn_Login_vue":1,"resources_js_Pages_Authn_Register_vue":1,"resources_js_Pages_Collaborations_Create_vue":1,"resources_js_Pages_Collaborations_Edit_vue":1,"resources_js_Pages_Collaborations_Index_vue":1,"resources_js_Pages_Dashboard_vue":1,"resources_js_Pages_Dashboard_Index_vue":1,"resources_js_Pages_Index_vue":1,"resources_js_Pages_Projects_Create_vue":1,"resources_js_Pages_Projects_Edit_vue":1,"resources_js_Pages_Projects_Index_vue":1,"resources_js_Pages_Public_About_vue":1,"resources_js_Pages_Public_Contact_vue":1,"resources_js_Pages_Public_Documentation_vue":1,"resources_js_Pages_Public_Services_vue":1,"resources_js_Pages_Reports_Create_vue":1,"resources_js_Pages_Reports_Edit_vue":1,"resources_js_Pages_Reports_Index_vue":1,"resources_js_Pages_Users_Create_vue":1,"resources_js_Pages_Users_Edit_vue":1,"resources_js_Pages_Users_Index_vue":1,"resources_js_Pages_Welcome_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Auth_ConfirmPassword_vue":1,"resources_js_Pages_Auth_ForgotPassword_vue":1,"resources_js_Pages_Auth_Login_vue":1,"resources_js_Pages_Auth_Register_vue":1,"resources_js_Pages_Auth_ResetPassword_vue":1,"resources_js_Pages_Auth_VerifyEmail_vue":1,"resources_js_Pages_Authn_Login_vue":1,"resources_js_Pages_Authn_Register_vue":1,"resources_js_Pages_Collaborations_Create_vue":1,"resources_js_Pages_Collaborations_Edit_vue":1,"resources_js_Pages_Collaborations_Index_vue":1,"resources_js_Pages_Dashboard_vue":1,"resources_js_Pages_Dashboard_Index_vue":1,"resources_js_Pages_Index_vue":1,"resources_js_Pages_Projects_Create_vue":1,"resources_js_Pages_Projects_Edit_vue":1,"resources_js_Pages_Projects_Index_vue":1,"resources_js_Pages_Public_About_vue":1,"resources_js_Pages_Public_Contact_vue":1,"resources_js_Pages_Public_Documentation_vue":1,"resources_js_Pages_Public_Index_vue":1,"resources_js_Pages_Public_Services_vue":1,"resources_js_Pages_Reports_Create_vue":1,"resources_js_Pages_Reports_Edit_vue":1,"resources_js_Pages_Reports_Index_vue":1,"resources_js_Pages_Users_Create_vue":1,"resources_js_Pages_Users_Edit_vue":1,"resources_js_Pages_Users_Index_vue":1,"resources_js_Pages_Welcome_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
