@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 #use App\Events\CollaborationRoleDeleted;
 #use App\Events\CollaborationRoleSaved;
 
-class CollaborationRole extends Model
-{
+class CollaborationRole extends Model {
     use HasFactory;
     #use Notifiable;    
 

@@ -7,15 +7,12 @@ use App\CollaborationRoster;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 
-class CollaborationController extends Controller
-{
+class CollaborationController extends Controller {
     /**
      * Display a listing of the resource.
-     *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         $collaborations = Collaboration::all();
 
         return Inertia::render('Collaborations/Index',[
@@ -25,22 +22,18 @@ class CollaborationController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         return Inertia::render('Collaborations/Create');
     }
 
     /**
      * Store a newly created resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $uuid = Uuid::generate();
         $collaboration_max_members = 5;
 
@@ -61,23 +54,19 @@ class CollaborationController extends Controller
 
     /**
      * Display the specified resource.
-     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Collaboration $collaboration)
-    {
+    public function edit(Collaboration $collaboration) {
         return Inertia::render('Collaborations/Edit', [
             'collaboration' => $collaboration,
         ]);
@@ -85,13 +74,11 @@ class CollaborationController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Collaboration $collaboration)
-    {
+    public function update(Request $request, Collaboration $collaboration) {
         $request->validate([
             'collaboration_title' => 'required'.$collaboration->collaboration_key,
         ]);
@@ -108,15 +95,12 @@ class CollaborationController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Collaboration $collaboration)
-    {
+    public function destroy(Collaboration $collaboration) {
         $user->delete();
 
-        return redirect()->route('collaborations.index')->with('successMsg', 'Collaboration successfully deleted.');
-    
+        return redirect()->route('collaborations.index')->with('successMsg', 'Collaboration successfully deleted.');    
     }
 }

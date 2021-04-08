@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 #use App\Events\ModuleDeleted;
 #use App\Events\ModuleSaved;
 
-class Module extends Model
-{
+class Module extends Model {
     use HasFactory;
     #use Notifiable;    
 

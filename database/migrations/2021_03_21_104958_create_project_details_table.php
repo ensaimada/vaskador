@@ -4,15 +4,12 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProjectDetailsTable extends Migration
-{
+class CreateProjectDetailsTable extends Migration {
     /**
      * Run the migrations.
-     *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('project_details', function (Blueprint $table) {
             $table->uuid('project_key');
             $table->string('project_addr_line')->nullable();
@@ -32,18 +29,15 @@ class CreateProjectDetailsTable extends Migration
             $table->enum('project_busn_size_type',['Small','Medium','Large'])->nullable();
             
             $table->timestamps();
-
             $table->foreign('project_key')->references('project_key')->on('projects');
         });
     }
 
     /**
      * Reverse the migrations.
-     *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('project_details');
     }
 }

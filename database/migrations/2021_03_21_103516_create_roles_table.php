@@ -4,15 +4,12 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRolesTable extends Migration
-{
+class CreateRolesTable extends Migration {
     /**
      * Run the migrations.
-     *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('roles', function (Blueprint $table) {
             $table->char('role_code',5)->primary();
             $table->string('role_name',20);
@@ -22,11 +19,9 @@ class CreateRolesTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('roles');
     }
 }

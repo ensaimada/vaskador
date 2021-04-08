@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Events\CollaborationDeleted;
 use App\Events\CollaborationSaved;
 
-class Collaboration extends Model
-{
+class Collaboration extends Model {
     use HasFactory;
     use Notifiable;    
 

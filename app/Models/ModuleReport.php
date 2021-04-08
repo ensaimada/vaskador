@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Events\ModuleReportDeleted;
 use App\Events\ModuleReportSaved;
 
-class ModuleReport extends Model
-{
+class ModuleReport extends Model {
     use HasFactory;
     use Notifiable;    
 

@@ -4,15 +4,12 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModulesTable extends Migration
-{
+class CreateModulesTable extends Migration {
     /**
      * Run the migrations.
-     *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('modules', function (Blueprint $table) {
             $table->char('module_code',10)->primary();
             $table->string('module_name',30);
@@ -22,11 +19,9 @@ class CreateModulesTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('modules');
     }
 }

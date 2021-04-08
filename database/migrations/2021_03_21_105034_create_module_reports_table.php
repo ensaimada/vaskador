@@ -4,15 +4,12 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModuleReportsTable extends Migration
-{
+class CreateModuleReportsTable extends Migration {
     /**
      * Run the migrations.
-     *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('module_reports', function (Blueprint $table) {
             $table->uuid('report_key')->primary();
             $table->char('module_code',10);
@@ -28,11 +25,9 @@ class CreateModuleReportsTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('module_reports');
     }
 }

@@ -9,27 +9,22 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 
-class ConfirmablePasswordController extends Controller
-{
+class ConfirmablePasswordController extends Controller {
     /**
      * Show the confirm password view.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
-    public function show(Request $request)
-    {
+    public function show(Request $request) {
         return Inertia::render('Auth/ConfirmPassword');
     }
 
     /**
      * Confirm the user's password.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return mixed
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         if (! Auth::guard('web')->validate([
             'email' => $request->user()->email,
             'password' => $request->password,

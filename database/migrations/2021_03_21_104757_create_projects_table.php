@@ -4,15 +4,12 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProjectsTable extends Migration
-{
+class CreateProjectsTable extends Migration {
     /**
      * Run the migrations.
-     *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('projects', function (Blueprint $table) {
             $table->uuid('project_key')->primary();
             $table->uuid('collaboration_key');
@@ -26,11 +23,9 @@ class CreateProjectsTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('projects');
     }
 }

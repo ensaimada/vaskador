@@ -7,15 +7,12 @@ use App\ProjectDetail;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 
-class ProjectController extends Controller
-{
+class ProjectController extends Controller {
     /**
      * Display a listing of the resource.
-     *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         $project = Project::all();
         
         return Inertia::render('Projects/Index', [
@@ -25,22 +22,18 @@ class ProjectController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         return Inertia::render('Projects/Create');
     }
 
     /**
      * Store a newly created resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $uuid = Uuid::generate();
 
         $request->validate([
@@ -57,12 +50,10 @@ class ProjectController extends Controller
 
     /**
      * Display the specified resource.
-     *
      * @param  Project $project
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -72,8 +63,7 @@ class ProjectController extends Controller
      * @param  Project $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
-    {
+    public function edit(Project $project) {
         return Inertia::render('Projects/Edit', [
             'project' => $project,
         ]);
@@ -81,13 +71,11 @@ class ProjectController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @param  Project $project
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
-    {
+    public function update(Request $request, Project $project) {
         $request->validate([
             //
         ]);
@@ -97,20 +85,16 @@ class ProjectController extends Controller
         ]);
 
         return redirect()->route('projects.index')->with('successMsg', 'Project successfully modified.');
-    
     }
 
     /**
      * Remove the specified resource from storage.
-     *
      * @param  Project $project
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Project $project)
-    {
+    public function destroy(Project $project) {
         $project->delete();
 
         return redirect()->route('project.index')->with('successMsg', 'Project successfully deleted.');
-    
     }
 }

@@ -7,14 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 use App\Events\ProjectDeleted;
 use App\Events\ProjectSaved;
 
-class Project extends Model
-{
+class Project extends Model {
     use HasFactory;
     use Notifiable;    
 
     protected $primaryKey = 'project_key';
     public $incrementing = false;
     protected $keyType = 'string';
+
+    /**
+     * Attributes that are mass assignable.
+     * @var array
+     */
+    ## Attributes Definition ##
+    protected $fillable = ['project_title', 'project_description']; 
 
     # 1:1 -- PROJECT DETAIL #
     public function ProjectDetail() {

@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 #use App\Events\CollaborationRosterDeleted;
 #use App\Events\CollaborationRosterSaved;
 
-class CollaborationRoster extends Model
-{
+class CollaborationRoster extends Model {
     use HasFactory;
     #use Notifiable;    
 
