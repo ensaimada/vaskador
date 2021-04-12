@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full md:w-1/5 bg-white md:bg-white px-2 text-center fixed pin-b md:pt-8 md:pin-t md:pin-l h-16 md:h-screen md:border-r-4 md:border-grey-dark">
+  <div class="w-full md:w-1/5 bg-white md:bg-white px-2 text-center fixed pin-b h-full md:pt-8 md:pin-t md:pin-l md:h-screen md:border-r-4 md:border-grey-dark">
     <div class="md:relative mx-auto">
       <ul class="list-reset flex flex-row md:flex-col text-center md:text-right">
 
@@ -45,16 +45,15 @@
       <br>
       <hr>
     </div>
-    <Footer/>
+    
   </div>
 </template>
 
 <script>
-import Footer from "@/Components/Dashboard/Footer"
+
 
 export default {
     components: {
-      Footer
     }
   }
 </script>

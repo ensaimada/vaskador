@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Collaboration;
-use App\CollaborationRoster;
+use App\Models\Collaboration;
+use App\Models\CollaborationRoster;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 

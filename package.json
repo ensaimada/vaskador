@@ -30,6 +30,7 @@
         "@popperjs/core": "^2.9.1",
         "chartjs": "^0.3.24",
         "vue-meta": "^2.4.0",
-        "vue-plugin-load-script": "^2.0.1"
+        "vue-plugin-load-script": "^2.0.1",
+        "vue3-google-map": "^0.7.0"
     }
 }

@@ -12,10 +12,10 @@
 </template>
 
 <script>
-  import IndexLayout from "@/Layouts/IndexLayout"
+  import layout from "@/Layouts/Public/Layout"
 
   export default {
     metaInfo: { title: 'Contact' },
-    layout: IndexLayout,
+    layout: layout,
   }
 </script>

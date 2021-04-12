@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CollaborationRoster;
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 class CollaborationRosterController extends Controller {

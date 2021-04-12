@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CollaborationRole;
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 class CollaborationRoleController extends Controller {

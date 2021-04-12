@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Module;
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 class ModuleController extends Controller {

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller {

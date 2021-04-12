@@ -29,11 +29,29 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '70cf9bb98ad60c473fae572e53d2659ca0e962a3',
+    'reference' => 'ff3f955bf3674d88949b7d0c38376eaba87f0f1b',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
+    'alexpechkarev/geometry-library' => 
+    array (
+      'pretty_version' => '1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '85a0859e87343e871020f0bc7530309d75ab4a3c',
+    ),
+    'alexpechkarev/google-maps' => 
+    array (
+      'pretty_version' => '8.0',
+      'version' => '8.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cf10b7a5cbe18d4e0f845acf05d6979647f7b279',
+    ),
     'asm89/stack-cors' => 
     array (
       'pretty_version' => 'v2.0.2',
@@ -490,6 +508,15 @@ private static $installed = array (
       ),
       'reference' => '097fe5b3be73ab8edea1a5216a696f627c1f6b03',
     ),
+    'jbroadway/urlify' => 
+    array (
+      'pretty_version' => '1.2.2-stable',
+      'version' => '1.2.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9b227e8548f16268cef55b5eb5d659a801fa824b',
+    ),
     'kodova/hamcrest-php' => 
     array (
       'replaced' => 
@@ -522,7 +549,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '70cf9bb98ad60c473fae572e53d2659ca0e962a3',
+      'reference' => 'ff3f955bf3674d88949b7d0c38376eaba87f0f1b',
     ),
     'laravel/sail' => 
     array (
@@ -1363,6 +1390,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '80953678b19901e5165c56752d087fc11526017c',
+    ),
+    'voku/stop-words' => 
+    array (
+      'pretty_version' => '2.0.1',
+      'version' => '2.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8e63c0af20f800b1600783764e0ce19e53969f71',
     ),
     'webmozart/assert' => 
     array (

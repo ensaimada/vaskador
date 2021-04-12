@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\ModuleReport;
+use App\Models\ModuleReport;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 

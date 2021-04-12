@@ -15,8 +15,6 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/map', function () { return Inertia::render('Test/MapsTest', []); });
-
 ## PUBLIC PAGES ##
 Route::get('/index', function () { return Inertia::render('Index', []); });
 Route::get('/about', function () { return Inertia::render('Public/About', []); });
@@ -31,37 +29,51 @@ Route::get('/register', function () { return Inertia::render('Authn/Register', [
 ## DASHBOARD PAGES ##
 Route::get('/playground', function () { return Inertia::render('Dashboard/Index', []); });
 
+## USER PAGE ROUTES ##
+Route::get('/u-index', function () { return Inertia::render('Users/Index', []); });
+Route::get('/u-create', function () { return Inertia::render('Users/Create', []); });
+Route::get('/u-edit', function () { return Inertia::render('Users/Edit', []); });
+
+## PROJECT PAGE ROUTES ##
+Route::get('/p-index', function () { return Inertia::render('Projects/Index', []); });
+Route::get('/p-create', function () { return Inertia::render('Projects/Create', []); });
+Route::get('/p-edit', function () { return Inertia::render('Projects/Edit', []); });
+Route::get('/p-mapview', function () { return Inertia::render('Projects/MapView', []); });
+
+## COLLABORATION PAGE ROUTES ##
+## REPORTS PAGE ROUTES ##
+
 ## USER FUNCTION ROUTES ##
-Route::get('/Users', 'UsersController@index')->name('users.index');
-Route::get('/Users/Create', 'UsersController@create')->name('users.create');
-Route::get('/Users', 'UsersController@store')->name('users.store');
-Route::get('/Users/{user}/Edit', 'UsersController@edit')->name('users.edit');
-Route::get('/Users/{user}', 'UsersController@update')->name('users.update');
-Route::get('/Users/{user}', 'UsersController@destroy')->name('users.destroy');
+Route::get('/users', 'UserController@index')->name('users.index');
+Route::get('/users/create', 'UserController@create')->name('user.create');
+Route::post('/users', 'UserController@store')->name('user.store');
+Route::get('/users/{user}/edit', 'UserController@edit')->name('user.edit');
+Route::patch('/users/{user}', 'UserController@update')->name('user.update');
+Route::delete('/users/{user}', 'UserController@destroy')->name('user.destroy');
 
 ## COLLABORATION FUNCTION ROUTES ##
-Route::get('/Collaborations', 'CollaborationsController@index')->name('collaborations.index');
-Route::get('/Collaborations/Create', 'CollaborationsController@create')->name('collaborations.create');
-Route::get('/Collaborations', 'CollaborationsController@store')->name('collaborations.store');
-Route::get('/Collaborations/{collaboration}/Edit', 'CollaborationsController@edit')->name('collaborations.edit');
-Route::get('/Collaborations/{collaboration}', 'CollaborationsController@update')->name('collaborations.update');
-Route::get('/Collaborations/{collaboration}', 'CollaborationsController@destroy')->name('collaborations.destroy');
+Route::get('/collaborations', 'CollaborationController@index')->name('collaboration.index');
+Route::get('/collaborations/create', 'CollaborationController@create')->name('collaboration.create');
+Route::post('/collaborations', 'CollaborationController@store')->name('collaboration.store');
+Route::get('/collaborations/{collaboration}/edit', 'CollaborationController@edit')->name('collaboration.edit');
+Route::patch('/collaborations/{collaboration}', 'CollaborationController@update')->name('collaboration.update');
+Route::delete('/collaborations/{collaboration}', 'CollaborationController@destroy')->name('collaboration.destroy');
 
 ## PROJECT FUNCTION ROUTES ##
-Route::get('/Projects', 'ProjectsController@index')->name('projects.index');
-Route::get('/Projects/Create', 'ProjectsController@create')->name('projects.create');
-Route::get('/Projects', 'ProjectsController@store')->name('projects.store');
-Route::get('/Projects/{project}/Edit', 'ProjectsController@edit')->name('projects.edit');
-Route::get('/Projects/{project}', 'ProjectsController@update')->name('projects.update');
-Route::get('/Projects/{project}', 'ProjectsController@destroy')->name('projects.destroy');
+Route::get('/projects', 'ProjectController@index')->name('project.index');
+Route::get('/projects/create', 'ProjectController@create')->name('project.create');
+Route::post('/projects', 'ProjectController@store')->name('project.store');
+Route::get('/projects/{project}/edit', 'ProjectController@edit')->name('project.edit');
+Route::patch('/projects/{project}', 'ProjectController@update')->name('project.update');
+Route::delete('/projects/{project}', 'ProjectController@destroy')->name('project.destroy');
 
 ## REPORT FUNCTION ROUTES ##
-Route::get('/Reports', 'ReportsController@index')->name('reports.index');
-Route::get('/Reports/Create', 'ReportsController@create')->name('reports.create');
-Route::get('/Reports', 'ReportsController@store')->name('reports.store');
-Route::get('/Reports/{report}/Edit', 'ReportsController@edit')->name('reports.edit');
-Route::get('/Reports/{report}', 'ReportsController@update')->name('reports.update');
-Route::get('/Reports/{report}', 'ReportsController@destroy')->name('reports.destroy');
+Route::get('/reports', 'ReportController@index')->name('report.index');
+Route::get('/reports/create', 'ReportController@create')->name('report.create');
+Route::post('/reports', 'ReportController@store')->name('report.store');
+Route::get('/reports/{report}/edit', 'ReportController@edit')->name('report.edit');
+Route::patch('/reports/{report}', 'ReportController@update')->name('report.update');
+Route::delete('/reports/{report}', 'ReportController@destroy')->name('report.destroy');
 
 //////////////////////////////////////////
 /*

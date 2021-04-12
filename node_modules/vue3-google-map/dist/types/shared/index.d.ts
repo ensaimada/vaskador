@@ -1,0 +1,10 @@
+import { InjectionKey, Ref } from 'vue';
+import { IGoogleMapsAPI, IMap } from '../@types/index';
+export declare const ApiSymbol: InjectionKey<Ref<IGoogleMapsAPI | null>>;
+export declare const MapSymbol: InjectionKey<Ref<IMap | null>>;
+export declare const mapEvents: string[];
+export declare const markerEvents: string[];
+export declare const polylineEvents: string[];
+export declare const polygonEvents: string[];
+export declare const rectangleEvents: string[];
+export declare const circleEvents: string[];

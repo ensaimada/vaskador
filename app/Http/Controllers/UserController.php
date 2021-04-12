@@ -2,21 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\UserDetail;
+use App\Models\User;
+use App\Models\UserDetail;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the users.
      * @return \Illuminate\Http\Response
      */
     public function index() {
+        $users = DB::table('users')
+                    ->join('user_details', 'users.user_key', '=', 'user_details.user_key')
+                    ->select('users.user_key','user_details.name_given', 'user_details.name_last', 'users.email')
+                    ->get();
+
         return Inertia::render('Users/Index', [
-            'users' => User::all()->map(function ($user) {
+            'users' => $users,
+
+            'susers' => User::all()->map(function ($user) {
                 return [
-                    'id' => $user->user_key,
+                    'Key' => $user->user_key,
                     'name' => $user->user_name,
                     'email' => $user->user_email,
                     'edit_url' => URL::route('users.edit', $user)
@@ -77,16 +85,16 @@ class UserController extends Controller {
 
     /**
      * Display the specified resource.
-     * @param  int  $id
+     * @param  User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
+    public function show(User $user) {
         //
     }
 
     /**
      * Show the form for editing the specified resource.
-     * @param  int  $id
+     * @param  int User $user
      * @return \Illuminate\Http\Response
      */
     public function edit(User $user) {
@@ -98,7 +106,7 @@ class UserController extends Controller {
     /**
      * Update the specified resource in storage.
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int User $user
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user) {
@@ -115,7 +123,7 @@ class UserController extends Controller {
 
     /**
      * Remove the specified resource from storage.
-     * @param  int  $id
+     * @param  int User $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user) {
