@@ -10,32 +10,18 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller {
     /**
-     * Display a listing of the users.
+     * Display a listing of all users.
      * @return \Illuminate\Http\Response
      */
     public function index() {
         $users = DB::table('users')
-                    ->join('user_details', 'users.user_key', '=', 'user_details.user_key')
-                    ->select('users.user_key','user_details.name_given', 'user_details.name_last', 'users.email')
-                    ->get();
+                ->join('user_details', 'users.user_key', '=', 'user_details.user_key')
+                ->select('users.user_key','user_details.name_given', 'user_details.name_last', 'users.email')
+                ->get();
 
         return Inertia::render('Users/Index', [
             'users' => $users,
-
-            'susers' => User::all()->map(function ($user) {
-                return [
-                    'Key' => $user->user_key,
-                    'name' => $user->user_name,
-                    'email' => $user->user_email,
-                    'edit_url' => URL::route('users.edit', $user)
-                ];
-            }),
-            'create_url' => URL::route('users.create')
-
         ]);
-
-        #$users = User::all();
-        #return Inertia::render('Users/Index',['users' => $users,]);
     }
 
     /**
@@ -47,7 +33,7 @@ class UserController extends Controller {
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created user in storage.
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -55,11 +41,13 @@ class UserController extends Controller {
         $uuid = Uuid::generate();
 
         $request->validate([
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:16',
-            'user_name_title' => 'required',
-            'user_name_given' => 'required',
-            'user_name_last' => 'required',
+            'email' => 'required|regex:/^([\w\.\_]{1,}[\w\.\_])+@([\w\_]+)+(\.\w+){1,}$|email|unique:users',
+            'password' => 'required|regex:/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{12,}$|min:12',
+            'user_name_title' => 'required|max:15',
+            'user_name_given' => 'required|max:45',
+            'user_name_given' => 'max:45',
+            'user_name_last' => 'required|max:45',
+            'user_phone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
         ]);
 
         User::create([
@@ -84,17 +72,19 @@ class UserController extends Controller {
     }
 
     /**
-     * Display the specified resource.
-     * @param  User  $user
+     * Display the specified user.
+     * @param  User $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user) {
-        //
+        return Inertia::render('Users/View', [
+            'user' => $user,
+        ]);
     }
 
     /**
-     * Show the form for editing the specified resource.
-     * @param  int User $user
+     * Show the form for editing the specified user.
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
     public function edit(User $user) {
@@ -104,8 +94,8 @@ class UserController extends Controller {
     }
 
     /**
-     * Update the specified resource in storage.
-     * @param  \Illuminate\Http\Request  $request
+     * Update the specified user in storage.
+     * @param  \Illuminate\Http\Request $request
      * @param  int User $user
      * @return \Illuminate\Http\Response
      */
@@ -122,7 +112,7 @@ class UserController extends Controller {
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified user from storage.
      * @param  int User $user
      * @return \Illuminate\Http\Response
      */

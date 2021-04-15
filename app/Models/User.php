@@ -22,7 +22,10 @@ class User extends Model {
      * @var array
      */
     ## Attributes Definition ##
-    protected $fillable = ['email', 'password']; 
+    protected $fillable = [
+                            'email', 
+                            'password'
+                        ]; 
 
     # 1:1 -- USER DETAIL #
     public function UserDetail() {

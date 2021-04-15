@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'URLify' => array($vendorDir . '/jbroadway/urlify'),
+    'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
 );

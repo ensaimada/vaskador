@@ -14,10 +14,13 @@ class Role extends Model {
      * @var array
      */
     ## Attributes Definition ##
-    protected $fillable = ['role_name', 'role_description']; 
+    protected $fillable = [
+                            'role_name', 
+                            'role_description'
+                        ]; 
 
     # 1:M -- USER ROLE #
-    public function UserRole(){
+    public function UserRole() {
         return $this->hasMany(UserRole::class);
     }
 }

@@ -21,7 +21,10 @@ class Project extends Model {
      * @var array
      */
     ## Attributes Definition ##
-    protected $fillable = ['project_title', 'project_description']; 
+    protected $fillable = [
+                            'project_title', 
+                            'project_description'
+                        ]; 
 
     # 1:1 -- PROJECT DETAIL #
     public function ProjectDetail() {

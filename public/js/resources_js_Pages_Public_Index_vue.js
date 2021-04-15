@@ -38,9 +38,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_Public_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/Public/Layout */ "./resources/js/Layouts/Public/Layout.vue");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  metaInfo: {
-    title: 'Index'
-  },
   layout: _Layouts_Public_Layout__WEBPACK_IMPORTED_MODULE_0__.default
 });
 
@@ -60,7 +57,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "bg-gray-900 sm:mt-10 pt-10 object-none object-bottom"
+  "class": "bg-gray-900 pt-10 object-none object-bottom"
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left\"><!-- Col-1 --><div class=\"p-5 w-1/2 sm:w-4/12 md:w-3/12\"><!-- Col-1 Title --><div class=\"text-xs uppercase text-gray-400 font-medium mb-6\">Getting Started</div><!-- Links --><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Installation</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Release Notes</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Upgrade Guide</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Using with Preprocessors</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Optimizing for Production</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Browser Support</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">IntelliSense</a></div><!-- Col-2 --><div class=\"p-5 w-1/2 sm:w-4/12 md:w-3/12\"><!-- Col-2 Title --><div class=\"text-xs uppercase text-gray-400 font-medium mb-6\">Core Concepts</div><!-- Links --><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Utility-First</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Responsive Design</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Hover, Focus, &amp; Other States</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Dark Mode</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Adding Base Styles</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Extracting Components</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Adding New Utilities</a></div><!-- Col-3 --><div class=\"p-5 w-1/2 sm:w-4/12 md:w-3/12\"><!-- Col-3 Title --><div class=\"text-xs uppercase text-gray-400 font-medium mb-6\">Customization</div><!-- Links --><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Configuration</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Theme Configuration</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Breakpoints</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Customizing Colors</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Customizing Spacing</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Configuring Variants</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Plugins</a></div><!-- Col-4 --><div class=\"p-5 w-1/2 sm:w-4/12 md:w-3/12\"><!-- Col-4 Title --><div class=\"text-xs uppercase text-gray-400 font-medium mb-6\">Community</div><!-- Links --><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">GitHub</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Discord</a><a href=\"#\" class=\"my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700\">Twitter</a></div></div>", 1);
@@ -99,7 +96,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   "class": "text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler",
   "data-target": "#navigation",
-  id: "openme"
+  id: "hamburger"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
   "class": "material-icons"
 }, ".OPENME")], -1
@@ -130,11 +127,7 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
-  "class": "bg-transparent text-gray-400 hover:text-white py-2 px-3"
-}, " .ENTER ", -1
-/* HOISTED */
-);
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" .ENTER ");
 
 function render(_ctx, _cache) {
   var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
@@ -149,7 +142,7 @@ function render(_ctx, _cache) {
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Dropdown Navbar Toggler"), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Link: Services Page"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Dropdown Navbar Toggler || Hamburger "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Link: Services Page"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
     href: "/services",
     "class": "lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
   }, {
@@ -189,7 +182,17 @@ function render(_ctx, _cache) {
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Link: Login/Signup Page"), _hoisted_10])]);
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Link: Login/Signup Page"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "/enter",
+    "class": "lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_10];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])]);
 }
 
 /***/ }),
@@ -207,12 +210,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "flex w-full mx-auto "
+};
+var _hoisted_2 = {
+  "class": "grid grid-flow-col auto-cols-auto"
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("aside", {
+  "class": "hidden md:col-span-3 bg-red-400"
+}, " Text heeeeeeeeeeeere ", -1
+/* HOISTED */
+);
+
+var _hoisted_4 = {
+  "class": "md:col-span-6 mb-6"
+};
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("aside", {
+  "class": "hidden md:col-span-3 bg-red-400"
+}, " Text ", -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Navbar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Navbar");
 
   var _component_Footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Footer");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" HEADER "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("header", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Navbar)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CONTENT "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("article", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" FOOTER "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" HEADER "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("header", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Navbar)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("main", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" CONTENT "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("article", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])]), _hoisted_5])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" FOOTER "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),

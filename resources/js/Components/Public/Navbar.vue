@@ -8,11 +8,11 @@
     <span class="text-xl text-white font-bold uppercase tracking-wide">.VSKDR</span>
   </inertia-link>
 
-  <!--Dropdown Navbar Toggler-->
+  <!--Dropdown Navbar Toggler || Hamburger -->
   <button 
     class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler" 
     data-target="#navigation" 
-    id="openme">
+    id="hamburger">
     <i class="material-icons">.OPENME</i>
   </button>
 
@@ -50,10 +50,11 @@
     </div>
     
     <!--Link: Login/Signup Page-->
-    <button 
-      class="bg-transparent text-gray-400 hover:text-white py-2 px-3">
+    <inertia-link 
+      href="/enter"
+      class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white">
       .ENTER
-    </button>
+    </inertia-link>
 
   </div>
 </nav>    

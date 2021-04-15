@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         GoogleMaps\ServiceProvider\GoogleMapsServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -230,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'GoogleMaps' => GoogleMaps\Facade\GoogleMapsFacade::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 

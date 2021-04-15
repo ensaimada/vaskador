@@ -38,9 +38,8 @@
   import layout from "@/Layouts/Dashboard/Layout"
 
   export default {
-    props: ['users', 'successMsg'],
-
-    metaInfo: { title: 'Index' },
     layout: layout,
+
+    props: ['users', 'successMsg']
   }
 </script>

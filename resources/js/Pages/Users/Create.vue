@@ -1,6 +1,7 @@
 <template>
   <layout>
     <div class="container">
+      
       <!-- ERROR MESSAGE BANNER -->
       <div v-if="Object.keys(errors).length > 0" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 relative" role="alert">
         <strong class="font-bold">Alert</strong>
@@ -178,7 +179,6 @@
   import layout from "@/Layouts/Dashboard/Layout"
 
   export default {
-    metaInfo: { title: 'CreateUser' },
     layout: layout,
 
     props: ['errors'],

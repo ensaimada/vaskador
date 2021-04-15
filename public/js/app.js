@@ -17464,7 +17464,7 @@ var el = document.getElementById('app');
       }
     });
   }
-}).use(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.plugin).use(vue_plugin_load_script__WEBPACK_IMPORTED_MODULE_3__.default).use(vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.GoogleMap, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Marker, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Polyline, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Polygon, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Rectangle, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Circle, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.CustomControl).mount(el);
+}).use(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.plugin).use(vue_plugin_load_script__WEBPACK_IMPORTED_MODULE_3__.default).use(vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.GoogleMap, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Marker, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Polyline, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Polygon, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.Circle, vue3_google_map__WEBPACK_IMPORTED_MODULE_4__.CustomControl).mount(el);
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__.InertiaProgress.init({
   color: '#4B5563'
 });
@@ -35784,6 +35784,14 @@ var map = {
 		"./resources/js/Pages/Auth/VerifyEmail.vue",
 		"resources_js_Pages_Auth_VerifyEmail_vue"
 	],
+	"./Authn/Enter": [
+		"./resources/js/Pages/Authn/Enter.vue",
+		"resources_js_Pages_Authn_Enter_vue"
+	],
+	"./Authn/Enter.vue": [
+		"./resources/js/Pages/Authn/Enter.vue",
+		"resources_js_Pages_Authn_Enter_vue"
+	],
 	"./Authn/Login": [
 		"./resources/js/Pages/Authn/Login.vue",
 		"resources_js_Pages_Authn_Login_vue"
@@ -35839,14 +35847,6 @@ var map = {
 	"./Dashboard/Index.vue": [
 		"./resources/js/Pages/Dashboard/Index.vue",
 		"resources_js_Pages_Dashboard_Index_vue"
-	],
-	"./Index": [
-		"./resources/js/Pages/Index.vue",
-		"resources_js_Pages_Index_vue"
-	],
-	"./Index.vue": [
-		"./resources/js/Pages/Index.vue",
-		"resources_js_Pages_Index_vue"
 	],
 	"./Projects/Create": [
 		"./resources/js/Pages/Projects/Create.vue",
@@ -36103,7 +36103,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Auth_ConfirmPassword_vue":1,"resources_js_Pages_Auth_ForgotPassword_vue":1,"resources_js_Pages_Auth_Login_vue":1,"resources_js_Pages_Auth_Register_vue":1,"resources_js_Pages_Auth_ResetPassword_vue":1,"resources_js_Pages_Auth_VerifyEmail_vue":1,"resources_js_Pages_Authn_Login_vue":1,"resources_js_Pages_Authn_Register_vue":1,"resources_js_Pages_Collaborations_Create_vue":1,"resources_js_Pages_Collaborations_Edit_vue":1,"resources_js_Pages_Collaborations_Index_vue":1,"resources_js_Pages_Dashboard_vue":1,"resources_js_Pages_Dashboard_Index_vue":1,"resources_js_Pages_Index_vue":1,"resources_js_Pages_Projects_Create_vue":1,"resources_js_Pages_Projects_Edit_vue":1,"resources_js_Pages_Projects_Index_vue":1,"resources_js_Pages_Projects_MapView_vue":1,"resources_js_Pages_Public_About_vue":1,"resources_js_Pages_Public_Contact_vue":1,"resources_js_Pages_Public_Documentation_vue":1,"resources_js_Pages_Public_Index_vue":1,"resources_js_Pages_Public_Services_vue":1,"resources_js_Pages_Reports_Create_vue":1,"resources_js_Pages_Reports_Edit_vue":1,"resources_js_Pages_Reports_Index_vue":1,"resources_js_Pages_Users_Create_vue":1,"resources_js_Pages_Users_Edit_vue":1,"resources_js_Pages_Users_Index_vue":1,"resources_js_Pages_Welcome_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Auth_ConfirmPassword_vue":1,"resources_js_Pages_Auth_ForgotPassword_vue":1,"resources_js_Pages_Auth_Login_vue":1,"resources_js_Pages_Auth_Register_vue":1,"resources_js_Pages_Auth_ResetPassword_vue":1,"resources_js_Pages_Auth_VerifyEmail_vue":1,"resources_js_Pages_Authn_Enter_vue":1,"resources_js_Pages_Authn_Login_vue":1,"resources_js_Pages_Authn_Register_vue":1,"resources_js_Pages_Collaborations_Create_vue":1,"resources_js_Pages_Collaborations_Edit_vue":1,"resources_js_Pages_Collaborations_Index_vue":1,"resources_js_Pages_Dashboard_vue":1,"resources_js_Pages_Dashboard_Index_vue":1,"resources_js_Pages_Projects_Create_vue":1,"resources_js_Pages_Projects_Edit_vue":1,"resources_js_Pages_Projects_Index_vue":1,"resources_js_Pages_Projects_MapView_vue":1,"resources_js_Pages_Public_About_vue":1,"resources_js_Pages_Public_Contact_vue":1,"resources_js_Pages_Public_Documentation_vue":1,"resources_js_Pages_Public_Index_vue":1,"resources_js_Pages_Public_Services_vue":1,"resources_js_Pages_Reports_Create_vue":1,"resources_js_Pages_Reports_Edit_vue":1,"resources_js_Pages_Reports_Index_vue":1,"resources_js_Pages_Users_Create_vue":1,"resources_js_Pages_Users_Edit_vue":1,"resources_js_Pages_Users_Index_vue":1,"resources_js_Pages_Welcome_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

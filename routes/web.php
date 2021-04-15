@@ -16,15 +16,16 @@ use Inertia\Inertia;
 */
 
 ## PUBLIC PAGES ##
-Route::get('/index', function () { return Inertia::render('Index', []); });
+Route::get('/index', function () { return Inertia::render('Public/Index', []); });
 Route::get('/about', function () { return Inertia::render('Public/About', []); });
 Route::get('/services', function () { return Inertia::render('Public/Services', []); });
 Route::get('/docs', function () { return Inertia::render('Public/Documentation', []); });
 Route::get('/contact', function () { return Inertia::render('Public/Contact', []); });
 
 ## AUTHN PAGES ##
-Route::get('/login', function () { return Inertia::render('Authn/Login', []); });
-Route::get('/register', function () { return Inertia::render('Authn/Register', []); });
+Route::get('/enter', function () { return Inertia::render('Authn/Enter', []); });
+Route::get('/login', function () { return Inertia::render('Authn/Login', []); });           // As Components
+Route::get('/register', function () { return Inertia::render('Authn/Register', []); });     // As Components
 
 ## DASHBOARD PAGES ##
 Route::get('/playground', function () { return Inertia::render('Dashboard/Index', []); });
@@ -41,7 +42,14 @@ Route::get('/p-edit', function () { return Inertia::render('Projects/Edit', []);
 Route::get('/p-mapview', function () { return Inertia::render('Projects/MapView', []); });
 
 ## COLLABORATION PAGE ROUTES ##
+Route::get('/c-index', function () { return Inertia::render('Users/Index', []); });
+Route::get('/c-create', function () { return Inertia::render('Users/Create', []); });
+Route::get('/c-edit', function () { return Inertia::render('Users/Edit', []); });
+
 ## REPORTS PAGE ROUTES ##
+Route::get('/r-index', function () { return Inertia::render('Users/Index', []); });
+Route::get('/r-create', function () { return Inertia::render('Users/Create', []); });
+Route::get('/r-edit', function () { return Inertia::render('Users/Edit', []); });
 
 ## USER FUNCTION ROUTES ##
 Route::get('/users', 'UserController@index')->name('users.index');
@@ -74,6 +82,7 @@ Route::post('/reports', 'ReportController@store')->name('report.store');
 Route::get('/reports/{report}/edit', 'ReportController@edit')->name('report.edit');
 Route::patch('/reports/{report}', 'ReportController@update')->name('report.update');
 Route::delete('/reports/{report}', 'ReportController@destroy')->name('report.destroy');
+Route::get('reports/{report}/export', 'ReportController@exportToPDF')->name('report.exportToPDF');
 
 //////////////////////////////////////////
 /*

@@ -15,7 +15,6 @@
   import layout from "@/Layouts/Public/Layout"
 
   export default {
-    metaInfo: { title: 'Index' },
     layout: layout,
   }
 </script>

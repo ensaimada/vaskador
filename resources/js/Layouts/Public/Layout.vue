@@ -1,18 +1,31 @@
 <template>
-  <main>
-    <!-- HEADER -->
-    <header>
-      <Navbar/>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <Navbar/>
+  </header>
 
-    <!-- CONTENT -->
-    <article>
-      <slot/>
-    </article>
+  <section class="flex w-full mx-auto ">
+    <div class="grid grid-flow-col auto-cols-auto">
+      <aside class="hidden md:col-span-3 bg-red-400">
+        Text heeeeeeeeeeeere
+      </aside>
 
-    <!-- FOOTER -->
-    <Footer/>
-  </main>
+      <main class="md:col-span-6 mb-6">
+        <!-- CONTENT -->
+        <article>
+          <slot/>
+        </article>
+      </main>
+
+      <aside class="hidden md:col-span-3 bg-red-400">
+        Text
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <Footer/>
+
 </template>
 
 <script>

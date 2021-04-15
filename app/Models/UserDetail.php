@@ -12,15 +12,27 @@ class UserDetail extends Model {
     use HasFactory;
     use Notifiable;    
 
+    protected $primaryKey = 'user_key';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
     /**
      * Attributes that are mass assignable.
      * @var array
      */
     ## Attributes Definition ##
-    protected $fillable = ['user_name_title', 'user_name_given', 'user_name_middle', 'user_name_last', 'user_dateofbirth', 'user_gender']; 
+    protected $fillable = [
+                            'user_name_title', 
+                            'user_name_given', 
+                            'user_name_middle', 
+                            'user_name_last', 
+                            'user_dateofbirth', 
+                            'user_gender',
+                            'user_phone_number'
+                        ]; 
 
     # 1:1 -- USER #
-    public function User(){
+    public function User() {
         return $this->belongsTo(User::class);
     }
 

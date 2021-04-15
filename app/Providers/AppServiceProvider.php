@@ -5,15 +5,12 @@ namespace App\Providers;
 use Inertia\Inertia;
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
-{
+class AppServiceProvider extends ServiceProvider {
     /**
      * Register any application services.
-     *
      * @return void
      */
-    public function register()
-    {
+    public function register() {
         Inertia::share('app.name', config('app.name'));
 
         Inertia::share('errors', function () {
@@ -30,8 +27,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
+    public function boot() {
         //
     }
 }

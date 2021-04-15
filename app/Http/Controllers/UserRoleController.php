@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserRole;
+use App\Models\User;
+use App\Models\Role;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 class UserRoleController extends Controller {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the all user roles.
      * @return \Illuminate\Http\Response
      */
     public function index() {

@@ -11,7 +11,7 @@
       </div>
 
       <!-- UPDATE USER FORM -->
-      <form action="#" method="PATCH" class="my-5" @submit.prevent="updateUser">
+      <form action="/users" method="PATCH" class="my-5" @submit.prevent="updateUser">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" class="form-control" id="name" placeholder="Name" v-model="form.name">
@@ -69,7 +69,7 @@
         if (confirm('Are you sure you want to delete this user?')) {
           this.$inertia.delete(`/users/${this.user.id}`) 
             .then(() => {
-              //
+              this.loading = false;
             })
         }
       }

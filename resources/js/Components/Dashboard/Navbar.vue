@@ -8,11 +8,11 @@
     <span class="text-xl text-white font-bold uppercase tracking-wide">.VSKDR</span>
   </inertia-link>
 
-  <!--Dropdown Navbar Toggler-->
+  <!--Dropdown Navbar Toggler || Hamburger-->
   <button 
     class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler" 
     data-target="#navigation" 
-    id="openme">
+    id="hamburger">
     <i class="material-icons">.OPENME</i>
   </button>
 

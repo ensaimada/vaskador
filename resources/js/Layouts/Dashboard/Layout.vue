@@ -4,22 +4,21 @@
     <header>
       <Navbar/>
     </header>
+    
     <!-- Wide center column -->
-    <div class="flex">
+    <div class="flex pb-4">
       <div class="w-1/12 bg-gray-500"></div>
 
       <div class="w-10/12 bg-gray-400">
-
         <!-- CONTENT -->
         <article>
           <slot/>
         </article>
-        <br>
-
       </div>
 
       <div class="w-1/12 bg-gray-500"></div>
     </div>
+
     <!-- FOOTER -->
     <Footer/>
   </main>
